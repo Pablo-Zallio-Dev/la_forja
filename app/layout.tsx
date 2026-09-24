@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo_Black, Barlow } from "next/font/google";
 import "./globals.css";
+import Header from "./components/organisms/Header";
 
 
 
@@ -29,7 +30,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                   lang="en"
                   className={` ${barlow.variable} ${archivoBlack.variable} h-full antialiased`}
             >
-                  <body className="min-h-full flex flex-col">{children}</body>
+                  <body className="min-h-full flex flex-col">
+                        <Header />
+                        <main>
+                        {children}
+
+                        </main>
+                        {/* footer */}
+                        </body>
             </html>
       );
 }
