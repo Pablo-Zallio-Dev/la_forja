@@ -1,7 +1,12 @@
-import React from 'react'
+import Container from "@/app/components/atoms/Container";
+
 
 export default function HomePage() {
   return (
-    <div>HomePage</div>
+      <div className="">
+
+            <p className=" h-screen border ">Hola</p>
+      </div>
   )
 }
+

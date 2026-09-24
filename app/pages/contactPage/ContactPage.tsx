@@ -1,7 +1,10 @@
+import Container from '@/app/components/atoms/Container'
 import React from 'react'
 
 export default function ContactPage() {
   return (
-    <div>ContactPage</div>
+      <Container>
+          <p className="">Contenido de contactoaddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+        </Container>
   )
 }
