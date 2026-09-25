@@ -11,7 +11,7 @@ export default function Header() {
       const [open, setOpen] = useState(false)
 
       return (
-            <section className=" fixed top-0 flex justify-center w-full bg-background border-b border-border  ">
+            <section className=" fixed top-0 z-500 flex justify-center w-full bg-background border-b border-border  ">
                   <div className="flex justify-between items-center w-full max-w-384 h-20 px-5 sm:px-8 lg:px-12">
 
                         <Logo />
