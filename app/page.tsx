@@ -4,6 +4,7 @@ import GalleryPage from "./pages/galleryPage/GalleryPage";
 import HomePage from "./pages/homePage/HomePage";
 import ServicesPage from "./pages/servicesPage/ServicesPage";
 
+
 export default function Home() {
   return (
    <>
