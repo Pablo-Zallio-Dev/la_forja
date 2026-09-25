@@ -23,6 +23,21 @@ const archivoBlack = Archivo_Black({
 export const metadata: Metadata = {
       title: "La Forja - Barberia y peluqueria",
       description: "Barberia y peluqueria masculina",
+      keywords: [
+            "Barberia Valencia",
+            "Peluqueria Valencia",
+            "Peluqueria masculina",
+      ],
+      openGraph: {
+            title: "La Forja",
+            description:
+                  "La Forja - Barberia y Peluqueria masculina",
+            url: "https://la-forja.netlify.app/",
+            siteName: "La Forja, tu peluqria.",
+            locale: "es_ES",
+            type: "website",
+            images: ["/og-image.png"],
+      },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
