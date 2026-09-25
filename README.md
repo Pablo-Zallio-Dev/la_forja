@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💈 La Forja - Barbería Tradicional & Corte Moderno
 
-## Getting Started
+Sitio web oficial de **La Forja**, una barbería de estética vintage e industrial ubicada en pleno centro de Valencia. La plataforma está optimizada para ofrecer una experiencia visual impactante, fluida y una conversión rápida de clientes hacia reservas directas por WhatsApp.
 
-First, run the development server:
+🚀 **Demo en vivo:** [https://la-forja.netlify.app/](https://la-forja.netlify.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Identidad Visual & Diseño
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Paleta de Colores:** Estética oscura vintage-industrial basada en tonos carbón (`#1A1A1A`), dorado/ámbar (`#D4AF37`) y superficies elevadas.
+- **Tipografía:** *Archivo Black* para titulares con fuerza y *Barlow* para textos y elementos secundarios.
+- **Formato Adaptativo:** Diseño *Responsive First*, adaptable desde pantallas móviles hasta monitores Ultrawide.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ✨ Características Principales
 
-To learn more about Next.js, take a look at the following resources:
+- **Navegación Smooth Scroll:** Desplazamiento suave entre secciones mediante anclas (`#servicios`, `#galeria`, `#equipo`, `#contacto`).
+- **Reserva Inteligente por WhatsApp:** Integración con la API de WhatsApp (`wa.me`) que genera automáticamente un mensaje estructurado para agilizar la reserva de citas.
+- **Galería Rejilla Asimétrica:** Exposición de trabajos con control estricto de *aspect ratio* (horizontal y vertical) sin necesidad de modales pesados.
+- **Integración con Google Maps:** Mapa interactivo integrado y estilizado sin errores de renderizado de React.
+- **OpenGraph Dinámico:** Generación automática de previsualizaciones en redes sociales mediante Next.js `ImageResponse` (`/app/opengraph-image.tsx`).
+- **Accesibilidad y Rendimiento:** Etiquetas `aria-label` optimizadas para lectores de pantalla y navegación por teclado.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Tecnologías Utilizadas
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Framework:** [Next.js](https://nextjs.org/) (App Router)
+- **Lenguaje:** [TypeScript](https://www.typescriptlang.org/)
+- **Estilos:** [Tailwind CSS](https://tailwindcss.com/)
+- **Iconos:** [Lucide React](https://lucide.dev/)
+- **Gestor de Paquetes:** [pnpm](https://pnpm.io/)
+- **Despliegue:** [Netlify](https://www.netlify.app/)
