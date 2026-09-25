@@ -1,15 +1,36 @@
 import Container from '@/app/components/atoms/Container'
+import OverTitle from '@/app/components/atoms/OverTitle'
+import Paragraph from '@/app/components/atoms/Paragraph'
+import TitleSection from '@/app/components/atoms/TitleSection'
+import { TEAM_DATA } from '@/app/data/dataBarber'
+import Image from 'next/image'
 import React from 'react'
 
 export default function AboutPage() {
-  return (
-      <Container>
-          <p className="">Contenido de nosotrosas</p>
-          <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum esse, nostrum consequuntur ex, quam voluptatem provident neque obcaecati tempore sed eius aperiam, architecto earum. Corporis a veniam dolores temporibus velit!
-          Quas consectetur inventore iste in quibusdam reiciendis cum enim saepe esse laboriosam alias minus incidunt dicta minima quod numquam facere ad culpa, optio, provident dolorum sint accusamus debitis? Dolorem, facilis.
-          Animi fugit non alias placeat! Corrupti tempore fuga numquam, deleniti consequuntur autem, reprehenderit, totam maiores optio ea doloremque ab est. Sed quae, dolorem aliquam non temporibus animi cupiditate fugiat consequuntur!
-          Expedita nam soluta voluptatem, veritatis explicabo, tempora, iusto veniam nobis quaerat mollitia rerum atque quasi distinctio sunt est accusamus quae repellendus dignissimos. Sapiente, illo doloribus. Officiis qui placeat at accusantium?
-          Explicabo ipsam soluta vero sapiente, molestias quasi provident. Saepe rerum ab obcaecati vitae! Recusandae, magni aspernatur maiores sed praesentium voluptatem voluptatum, harum at accusantium nobis nostrum cum. Dolorem, beatae blanditiis?</p>
-        </Container>
-  )
+      return (
+            <Container id={'equipo'} className=' flex flex-col lg:flex-row gap-14 items-center min-h-screen '>
+                  <div className=" flex flex-col gap-5 lg:w-1/2 ">
+                        <OverTitle>equipo & filosofia</OverTitle>
+                        <TitleSection>La barbería de siempre, al ritmo de hoy</TitleSection>
+                        <Paragraph>Somos cuatro barberos unidos por la técnica, el trato cercano y la obsesión por un acabado impecable. Aquí vienes a cortarte; vuelves por el ambiente.</Paragraph>
+                  </div>
+                  <div className=" grid grid-cols-1 sm:grid-cols-2 border border-border w-full lg:w-1/2   ">
+                        {
+                              TEAM_DATA.map((barber) => (
+                                    <div key={barber.id} className=" border border-border p-4 group">
+                                          <div className=" relative w-full aspect-16/12 border border-border ">
+                                                <Image src={barber.image} alt={''} fill className=' object-cover group-hover:scale-105 transition-transform duration-300 ' />
+                                                <span className=" absolute top-3 left-3 bg-card p-1.5 rounded-full font-archivo-black font-black text-xs text-primary ">{barber.id}</span>
+                                                <p className=" absolute bottom-2 right-2.5 px-1.5 py-0.5 bg-card font-barlow font-bold text-muted text-[10px] uppercase tracking-widest ">{barber.badge}</p>
+                                          </div>
+                                          <div className=" pt-5 ">
+                                                <h3 className=" uppercase font-archivo-black font-black text-xl lg:text-2xl ">{barber.name}</h3>
+                                                <p className=" pt-2 font-barlow text-[10px] text-muted tracking-widest ">{barber.role}</p>
+                                          </div>
+                                    </div>
+                              ))
+                        }
+                  </div>
+            </Container>
+      )
 }

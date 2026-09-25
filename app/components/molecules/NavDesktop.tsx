@@ -31,11 +31,36 @@ export const NAV_ITEMS = [
 
 
 export default function NavDesktop() {
+      const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    
+    const targetId = href.replace('#', '');
+    
+    // Si hace clic en inicio, podemos enviarlo al top 0 directamente
+    if (targetId === 'home') {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    } else {
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }
+
+    // Actualiza la historia sin recargar ni bloquear clics futuros
+    window.history.pushState(null, '', href);
+  };
+
   return (
    <nav className=" hidden lg:flex gap-8 ">
       {
             NAV_ITEMS.map((link) => (
-                  <LinkNavDesktop key={link.id} href={link.href} label={link.label} />
+                  <LinkNavDesktop key={link.id} href={link.href} label={link.label} onClick={(e) => handleScroll(e, link.href)} />
             ))
       }
    </nav>
